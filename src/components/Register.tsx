@@ -71,15 +71,16 @@ const Register: React.FC = () => {
     setForm((f) => ({ ...f, [name]: value }));
   };
 
+  const passwordValue = form.password;
   const passwordStrong = useMemo(() => {
-    const { password } = form;
+    const password = passwordValue;
     return (
       password.length >= 8 &&
       /[A-ZÁÉÍÓÚÑ]/.test(password) &&
       /\d/.test(password) &&
       /[^A-Za-z0-9]/.test(password)
     );
-  }, [form.password]);
+  }, [passwordValue]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { auth } from '../firebase.ts';
+// import { auth } from '../firebase.ts';
 import './Settings.css';
 
 const Settings: React.FC = () => {
   const navigate = useNavigate();
-  const [isLoading] = useState(false);
+  // const [isLoading] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   const [textSize, setTextSize] = useState<string>('100');
   const [contrastHigh, setContrastHigh] = useState<boolean>(false);
