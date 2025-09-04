@@ -1,0 +1,15 @@
+# Node / React
+node_modules/
+build/
+.cache/
+coverage/
+
+# Env
+.env*
+.firebase/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.log
+.vscode/

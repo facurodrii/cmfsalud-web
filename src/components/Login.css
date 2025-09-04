@@ -1,0 +1,196 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #03345b 0%, #13cbb0 100%);
+  padding: max(2rem, env(safe-area-inset-top)) 1rem max(2rem, env(safe-area-inset-bottom));
+}
+
+.login-box {
+  background: #f6fbfb;
+  padding: clamp(1.25rem, 4vw, 2rem);
+  border-radius: 16px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: min(540px, 100%);
+  text-align: center;
+  position: relative;
+}
+
+/* se quita barra decorativa superior para coincidir con la captura */
+.login-box::before { display: none; }
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.logo-image {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cmf {
+  font-size: 3.6rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 0.8;
+  letter-spacing: 2px;
+}
+
+.salud {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #7dd1c8;
+  letter-spacing: 6px;
+}
+
+/* no título visible en la maqueta */
+.login-box h2 { display: none; }
+
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+/* inputs sin etiquetas visibles, solo placeholders */
+.form-group label { display: none; }
+
+.form-group input {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background: #ffffff;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
+}
+
+.form-group input:focus {
+  outline: none;
+  background: #ffffff;
+  transform: none;
+  box-shadow: inset 0 0 0 2px #9ad9d1;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 1.1rem;
+  color: #032133;
+  background: linear-gradient(135deg, #29E7B9, #13c9f2);
+  border: 1px solid rgba(3,33,51,0.08);
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 900;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: filter 0.2s ease, transform 0.1s ease, box-shadow .2s ease;
+  box-shadow: 0 10px 24px rgba(19,201,242,0.28);
+}
+
+button[type="submit"]:hover { filter: brightness(0.96); box-shadow: 0 12px 28px rgba(19,201,242,0.35); }
+button[type="submit"]:active { transform: translateY(1px); }
+
+button:disabled {
+  background: linear-gradient(135deg, #d5e9e5, #cfe7f5) !important;
+  color: #7f8c8d !important;
+  border-color: rgba(3,33,51,0.06) !important;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.error-message {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  color: white;
+  padding: 1rem;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.info-message {
+  background: #e6f7f4;
+  color: #0f6f68;
+  padding: 0.9rem;
+  border-radius: 10px;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.auth-links {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+
+.forgot-link {
+  color: #0e3757;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.register-link { color: #0e3757; text-decoration: underline; font-weight: 600; }
+
+/* Botón/enlace de marca con degradado */
+.brand-cta {
+  display: inline-block;
+  text-decoration: none !important;
+  color: #032133 !important;
+  background: linear-gradient(135deg, #29E7B9, #13c9f2);
+  border-radius: 10px;
+  padding: .6rem 1rem;
+  font-weight: 800;
+  letter-spacing: .3px;
+  box-shadow: 0 8px 20px rgba(19, 201, 242, 0.28);
+  border: 1px solid rgba(3,33,51,0.08);
+}
+.brand-cta:hover { filter: brightness(0.96); box-shadow: 0 10px 24px rgba(19,201,242,0.35); }
+.brand-cta:active { transform: translateY(1px); }
+body.theme-dark .brand-cta { color: #032133 !important; }
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .login-box {
+    padding: clamp(1rem, 4vw, 1.5rem);
+    margin: 1rem;
+  }
+  
+  .logo-image {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .cmf {
+    font-size: 2.2rem;
+  }
+  
+  .salud {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .cmf { font-size: 1.9rem; }
+  .logo { gap: .6rem; }
+  .logo-image { width: 48px; height: 48px; }
+}

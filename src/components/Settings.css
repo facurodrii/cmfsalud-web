@@ -1,0 +1,30 @@
+/* Reutilizamos estilos globales de las demás pantallas (solicitud-*) */
+.settings-form { max-width: 960px; }
+.section-subtitle {
+  color: #ffffff;
+  margin: 16px 0 12px;
+  font-weight: 900;
+  letter-spacing: .5px;
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #29E7B9, #13c9f2);
+  box-shadow: 0 6px 16px rgba(19, 201, 242, 0.25);
+  text-transform: uppercase;
+}
+.toggle-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 8px; }
+.toggle-item { background: #fff; border: 1px solid rgba(4,58,102,.15); border-radius: 10px; padding: 10px 12px; color: #0a2a45; font-weight: 600; }
+
+/* Accesibilidad global */
+body.a11y-text-large { font-size: 18px; }
+body.a11y-contrast-high { filter: contrast(1.15) saturate(1.05); }
+body.theme-dark { background: #000 !important; color: #fff; }
+body.theme-dark .solicitud-form { background: rgba(0, 0, 0, 0.85); color: #fff; }
+body.theme-dark .solicitud-input { background: #111; color: #fff; border-color: rgba(255,255,255,0.2); }
+body.theme-dark .solicitud-title { color: #ffffff; }
+body.theme-dark .alert-custom { background: #111; color: #fff; border-color: #29E7B9; }
+body.theme-dark .toggle-item { background: #0d0d0d; border-color: rgba(255,255,255,0.2); color: #ffffff; }
+
+@media (max-width: 768px) {
+  .toggle-grid { grid-template-columns: 1fr; }
+}

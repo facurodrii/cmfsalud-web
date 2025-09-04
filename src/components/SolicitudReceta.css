@@ -1,0 +1,186 @@
+/* Fondo y tarjeta */
+.solicitud-bg {
+  width: 100%;
+}
+
+.solicitud-form {
+  width: 100%;
+  max-width: 960px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(6px);
+}
+
+.solicitud-title {
+  color: #0a2a45; /* negro azulado para contraste sobre tarjeta clara */
+  text-shadow: none;
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: .5px;
+  text-align: center;
+}
+
+/* Título con logo */
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.title-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.user-info-compact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  justify-content: center;
+  color: #e6f2fa;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Filas y campos */
+.solicitud-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.solicitud-row.cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.solicitud-row.cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.solicitud-input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(4, 58, 102, 0.25);
+  background: #ffffff;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Divisor accesible que se adapta al tema */
+.solicitud-divider {
+  border: none;
+  border-top: 2px solid rgba(10, 42, 69, 0.4);
+  margin: 0;
+}
+
+.solicitud-input:focus {
+  border-color: #29E7B9;
+  box-shadow: 0 0 0 3px rgba(41, 231, 185, 0.25);
+}
+
+.row-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Resaltado para la opción 'Otro' */
+select .option-other {
+  font-weight: 800;
+  color: #043A66;
+}
+
+/* Botones */
+.solicitud-btn {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #29E7B9;
+  background: #043A66;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.solicitud-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(4, 58, 102, 0.25);
+}
+
+.solicitud-btn.secondary {
+  background: #ffffff;
+  color: #043A66;
+  margin: 8px 0 12px;
+}
+
+.solicitud-btn.secondary.highlight {
+  background: linear-gradient(135deg, #29E7B9, #13c9f2);
+  color: #032133;
+  border-color: transparent;
+  box-shadow: 0 6px 16px rgba(19, 201, 242, 0.35);
+}
+.solicitud-btn.secondary.highlight:hover {
+  filter: brightness(0.95);
+  transform: translateY(-1px);
+}
+
+.solicitud-btn.ghost {
+  width: auto;
+  background: transparent;
+  color: #043A66;
+}
+
+.solicitud-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Overrides modo oscuro para esta pantalla */
+body.theme-dark .solicitud-form { background: rgba(0,0,0,0.9); }
+body.theme-dark .solicitud-title { color: #fff; }
+body.theme-dark .solicitud-input { background: #111; color: #fff; border-color: rgba(255,255,255,0.25); }
+body.theme-dark .solicitud-btn.ghost { color: #fff; border-color: rgba(255,255,255,0.35); }
+body.theme-dark .solicitud-btn.secondary { background: #111; color: #fff; border-color: #29E7B9; }
+body.theme-dark .solicitud-divider { border-top-color: rgba(255,255,255,0.25); }
+
+/* Alertas */
+.alert-custom {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #e6fff8, #ffffff);
+  color: #043A66;
+  border: 2px solid #29E7B9;
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-weight: 700;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.25);
+  z-index: 1000;
+}
+
+.alert-close {
+  margin-left: 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #c0392b;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .solicitud-form {
+    padding: 16px;
+  }
+  .solicitud-row.cols-3, .solicitud-row.cols-4 {
+    grid-template-columns: 1fr;
+  }
+}

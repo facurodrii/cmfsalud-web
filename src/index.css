@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+/* Escalas de tamaño de texto para accesibilidad */
+body.a11y-text-100 { font-size: 16px; }
+body.a11y-text-115 { font-size: 18px; }
+body.a11y-text-130 { font-size: 20px; }
+body.a11y-text-150 { font-size: 22px; }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Etiquetas de formularios reutilizables */
+.form-label { color: #0b2f4a; }
+body.theme-dark .form-label { color: #ffffff; }
+
+/* Modo oscuro global para tarjetas y campos comunes */
+body.theme-dark { background: #000 !important; color: #fff; }
+body.theme-dark .solicitud-form { background: rgba(0,0,0,0.9); color: #fff; }
+body.theme-dark .solicitud-title { color: #ffffff; }
+body.theme-dark .solicitud-input { background: #111; color: #ffffff; border-color: rgba(255,255,255,0.25); }
+body.theme-dark .solicitud-btn.ghost { color: #ffffff; border-color: rgba(255,255,255,0.35); }
+body.theme-dark .solicitud-btn.secondary { background: #111; color: #ffffff; border-color: #29E7B9; }
+body.theme-dark .alert-custom { background: #111; color: #ffffff; border-color: #29E7B9; }
+
+.medical-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.medical-card:hover {
+  transform: translateY(-5px);
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.medical-green {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+.medical-blue {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+}

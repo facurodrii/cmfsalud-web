@@ -1,0 +1,221 @@
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #03345b 0%, #13cbb0 100%);
+  padding: max(1.5rem, env(safe-area-inset-top)) 1rem max(1.5rem, env(safe-area-inset-bottom));
+}
+
+.register-box {
+  background: #f6fbfb;
+  padding: clamp(1rem, 4vw, 2rem);
+  border-radius: 16px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: min(760px, 100%);
+}
+
+/* Botón Volver usa estilos compartidos en SolicitudReceta.css */
+
+.register-box::before { display: none; }
+
+.register-box h1 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.register-box h2 {
+  color: #7f8c8d;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #ecf0f1;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #11998e;
+  background: white;
+  box-shadow: 0 0 20px rgba(17, 153, 142, 0.1);
+  transform: translateY(-2px);
+}
+
+button {
+  width: 100%;
+  padding: 1rem;
+  color: #032133;
+  background: linear-gradient(135deg, #29E7B9, #13c9f2);
+  border: 1px solid rgba(3,33,51,0.08);
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 900;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: filter 0.2s ease, transform .1s ease, box-shadow .2s ease;
+  box-shadow: 0 10px 24px rgba(19,201,242,0.28);
+}
+
+button:hover { filter: brightness(0.96); box-shadow: 0 12px 28px rgba(19,201,242,0.35); }
+button:active { transform: translateY(1px); }
+
+button:disabled {
+  background: linear-gradient(135deg, #d5e9e5, #cfe7f5);
+  color: #7f8c8d;
+  border-color: rgba(3,33,51,0.06);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+body.theme-dark button { color: #032133; }
+
+.error-message {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+p {
+  text-align: center;
+  margin-top: 2rem;
+  color: #7f8c8d;
+}
+
+a {
+  color: #11998e;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #38ef7d;
+  text-decoration: underline;
+}
+
+.medical-icon {
+  font-size: 3rem;
+  color: #11998e;
+  margin-bottom: 1rem;
+}
+
+/* Nuevos estilos para el layout del formulario que replica la captura */
+.register-title {
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: center;
+  margin: 0 0 1rem;
+  color: #0b2f4a; /* azul oscuro/negro */
+  text-transform: uppercase;
+}
+
+.register-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.field-label { color: #0b2f4a; font-weight: 600; display: block; }
+.field-label input,
+.field-label select {
+  width: 100%;
+  margin-top: 6px;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: #ffffff;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
+}
+.field-label input:focus,
+.field-label select:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px #9ad9d1;
+}
+
+.password-hint {
+  color: #315666;
+  font-size: .9rem;
+  text-align: center;
+}
+
+.info-message {
+  background: #e6f7f4;
+  color: #0f6f68;
+  padding: 0.9rem;
+  border-radius: 12px;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.login-link { text-align: center; margin-top: 1rem; color: #315666; }
+.login-link a { color: #0e3757; text-decoration: underline; font-weight: 800; }
+
+/* Permite usar el estilo brand-cta aquí también */
+.brand-cta {
+  display: inline-block;
+  text-decoration: none !important;
+  color: #032133 !important;
+  background: linear-gradient(135deg, #29E7B9, #13c9f2);
+  border-radius: 10px;
+  padding: .6rem 1rem;
+  font-weight: 800;
+  letter-spacing: .3px;
+  box-shadow: 0 8px 20px rgba(19, 201, 242, 0.28);
+  border: 1px solid rgba(3,33,51,0.08);
+}
+body.theme-dark .brand-cta { color: #032133 !important; }
+
+/* Desktop: dos columnas y algunos campos a ancho completo */
+@media (min-width: 768px) {
+  .register-form { grid-template-columns: 1fr 1fr; }
+  .register-form .field-label:nth-child(n+5), /* desde Teléfono en adelante */
+  .register-form .password-hint,
+  .register-form button {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Very small devices */
+@media (max-width: 380px) {
+  .register-box { border-radius: 12px; }
+  .field-label input,
+  .field-label select { padding: .9rem; border-radius: 10px; }
+  button { padding: 1rem; border-radius: 10px; }
+}
