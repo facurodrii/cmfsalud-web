@@ -121,7 +121,9 @@ const Login: React.FC = () => {
         </form>
         
         <div className="auth-links">
-          <a href="#" onClick={handleForgotPassword} className="forgot-link">¿Olvidaste tu contraseña?</a>
+          <button type="button" onClick={handleForgotPassword} className="forgot-link" aria-label="Recuperar contraseña">
+            ¿Olvidaste tu contraseña?
+          </button>
           <Link to="/register" className="register-link brand-cta">Registrarse</Link>
         </div>
       </div>
