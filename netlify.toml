@@ -4,6 +4,8 @@
 
 [build.environment]
   NODE_VERSION = "20"
+  NPM_VERSION = "10"
+  NPM_FLAGS = "--no-audit --no-fund"
   CI = "false"
 
 # SPA routing: React Router
