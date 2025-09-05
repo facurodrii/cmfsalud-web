@@ -8,7 +8,7 @@ const Inicio: React.FC = () => {
   const navigate = useNavigate();
 
   const bgStyle: React.CSSProperties = {
-    backgroundImage: `linear-gradient(180deg, rgba(3,52,91,0.88) 0%, rgba(19,203,176,0.88) 100%), url(/cmf-profesionales.png)`,
+    backgroundImage: `linear-gradient(180deg, rgba(7,52,91,0.88) 0%, rgba(39,222,187,0.88) 100%), url(/cmf-profesionales.png)`,
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
@@ -27,72 +27,56 @@ const Inicio: React.FC = () => {
   return (
     <div className="inicio-container" style={bgStyle}>
       <div className="inicio-card">
-        <div className="top-actions">
-          <button
-            className="icon-btn profile-btn"
-            title="Mi Perfil"
-            onClick={() => navigate('/perfil')}
-          >
-            👤
-          </button>
-          <button
-            className="icon-btn logout-btn"
-            title="Cerrar sesión"
-            onClick={handleLogout}
-          >
-            ⏻
-          </button>
+        {/* Barra superior con acciones principales */}
+        <div className="top-bar">
+          <button className="top-btn" onClick={() => navigate('/perfil')}>Mi perfil</button>
+          <button className="top-btn outline" onClick={handleLogout}>Cerrar sesión</button>
         </div>
-        <div className="logo-section">
-          <div className="logo">
-            <img src="/Logo.png" alt="CMF Salud" className="logo-image" />
-            <div className="logo-text">
-              <span className="cmf">CMF</span>
-              <span className="salud">SALUD</span>
-            </div>
+
+        {/* Logo centrado grande */}
+        <div className="hero-logo">
+          <img src="/Logo.png" alt="CMF Salud" className="hero-logo-image" />
+          <div className="hero-logo-text">
+            <span className="cmf">CMF</span>
+            <span className="salud">SALUD</span>
           </div>
         </div>
-        
+
+        {/* Título principal */}
         <div className="main-title">
-          <h1>TU SALUD ES NUESTRA</h1>
-          <h1>PRIORIDAD</h1>
+          <h1>TU SALUD ES NUESTRA PRIORIDAD</h1>
         </div>
-        
-        <div className="description">
-          <p>En CMF SALUD brindamos atención médica integral a pacientes de todas las edades.</p>
-          <p>Contamos con un equipo de profesionales altamente calificados y una amplia gama de estudios médicos para garantizar diagnósticos precisos y tratamientos personalizados.</p>
-        </div>
-        
+
+        {/* Botones principales */}
         <div className="buttons-grid">
           <button 
-            className="service-btn recetas-btn"
+            className="service-btn"
             onClick={() => navigate('/solicitud-receta')}
           >
             RECETAS
           </button>
           
           <button 
-            className="service-btn turnos-btn"
+            className="service-btn"
             onClick={() => navigate('/turnos')}
           >
             TURNOS
           </button>
           
           <button 
-            className="service-btn ayuda-btn"
+            className="service-btn"
             onClick={() => navigate('/faq')}
           >
             AYUDA
           </button>
           
           <button 
-            className="service-btn config-btn"
+            className="service-btn"
             onClick={() => navigate('/settings')}
           >
             CONFIGURACIÓN
           </button>
           
-          {/* Eliminados botones de Contacto y Cerrar Sesión para dejar solo 4 */}
         </div>
 
       </div>

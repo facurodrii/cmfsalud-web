@@ -60,3 +60,11 @@ body.theme-dark .alert-custom { background: #111; color: #ffffff; border-color: 
 .medical-blue {
   background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
 }
+
+/* Gradiente de marca CMF (#2B8EDC, #27DEBB, #29E7B9, #2B95D9) */
+.brand-gradient {
+  background: linear-gradient(135deg, #2B8EDC 0%, #27DEBB 35%, #29E7B9 65%, #2B95D9 100%);
+}
+
+/* Botones con gradiente de marca en modo oscuro: mantener contraste del texto */
+body.theme-dark .brand-gradient { color: #032133; }
