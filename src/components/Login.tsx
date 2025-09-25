@@ -75,10 +75,6 @@ const Login: React.FC = () => {
       <div className="login-box">
         <div className="logo">
           <img src="/Logo.png" alt="CMF Salud" className="logo-image" />
-          <div className="logo-text">
-            <span className="cmf">CMF</span>
-            <span className="salud">SALUD</span>
-          </div>
         </div>
         {error && <div className="error-message">{error}</div>}
         {info && <div className="info-message">{info}</div>}

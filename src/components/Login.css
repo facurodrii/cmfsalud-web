@@ -25,22 +25,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.2rem;
 }
 
 .logo-image {
-  width: 60px;
-  height: 60px;
+  width: 110px;
+  height: auto;
+  max-width: 80vw;
   object-fit: contain;
-  border-radius: 50%;
-  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+  border-radius: 0;
+  box-shadow: none;
+  background: none;
+  display: block;
 }
 
 .logo-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  display: none;
 }
 
 .cmf {
@@ -174,23 +174,12 @@ body.theme-dark .brand-cta { color: #032133 !important; }
     padding: clamp(1rem, 4vw, 1.5rem);
     margin: 1rem;
   }
-  
   .logo-image {
-    width: 56px;
-    height: 56px;
-  }
-  
-  .cmf {
-    font-size: 2.2rem;
-  }
-  
-  .salud {
-    font-size: 0.85rem;
+    width: 80px;
+    max-width: 60vw;
   }
 }
 
 @media (max-width: 380px) {
-  .cmf { font-size: 1.9rem; }
-  .logo { gap: .6rem; }
-  .logo-image { width: 48px; height: 48px; }
+  .logo-image { width: 54px; }
 }
